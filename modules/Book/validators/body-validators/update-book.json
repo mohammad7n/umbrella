@@ -1,0 +1,29 @@
+{
+    "$id": "updateBook",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "minLength": 3,
+            "maxLenth": 60
+        },
+        "author": {
+            "type": "string",
+            "minLength": 3,
+            "maxLenth": 60
+        },
+        "category": {
+            "type": "string",
+            "minLength": 3,
+            "maxLenth": 30
+        },
+        "file": {
+            "type": "string",
+            "minLength": 15,
+            "maxLenth": 60
+        }
+    },
+    "required": [
+    ],
+    "additionalProperties": false
+}

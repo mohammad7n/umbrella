@@ -1,0 +1,10 @@
+{
+  "name": "@modules/book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Mohammad Rasouli <mohammad.rasouli.7n@gmail.com>",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

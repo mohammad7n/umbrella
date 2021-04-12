@@ -1,0 +1,22 @@
+{
+    "$id": "searchBook",
+    "type": "object",
+    "properties": {
+      "q": {
+        "type": "string"
+      },
+      "page_size": {
+        "type": "number",
+        "maximum": 50,
+        "minimum" : 10
+      },
+      "page_number": {
+        "type": "number",
+        "minimum" : 1
+      }
+    },
+    "required": [
+      "q"
+    ],
+    "additionalProperties": false
+  }

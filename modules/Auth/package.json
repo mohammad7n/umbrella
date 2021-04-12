@@ -1,0 +1,13 @@
+{
+  "name": "@modules/auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mohammad Rasouli <mohammad.rasouli.7n@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}

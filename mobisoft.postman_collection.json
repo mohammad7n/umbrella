@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "0a8e5825-1cd1-4282-aa79-53563c551418",
+		"name": "mobisoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mohammad\",\n    \"username\" :\"a@bbcc.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7500/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"a@b.com\",\n    \"password\" : \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7500/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"ydkjs\",\n    \"category\": \"IT\",\n    \"author\" : \"Ali\",\n    \"file\" : \"uploads/20210126/file.epub\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7500/api/books",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7500/api/books?q=di",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "di"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Edited\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7500/api/books/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "600fdb1b25805817c179eb9c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books Thirdparty",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7500/api/books/thrid-party?q=tes",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books",
+						"thrid-party"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "tes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7500/api/books/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "600fd89d940e550f99239a56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMGZkNTlhM2I5OTU2MGE2ZmZhODUxMiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjExNjUwNjg3LCJleHAiOjE2MTIyNTU0ODd9.qx7unbKT6rGRxRHXYLYGmq0KSo3an_TA6Snv4RNcz-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Edited\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7500/api/books/:bookId",
+					"host": [
+						"localhost"
+					],
+					"port": "7500",
+					"path": [
+						"api",
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "600fdb1b25805817c179eb9c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

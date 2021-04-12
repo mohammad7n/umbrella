@@ -1,0 +1,12 @@
+{
+    "name": "@modules/utils",
+    "version": "1.0.0",
+    "main": "lib/index.js",
+    "license": "MIT",
+    "author": "Mohammad Rasouli <mohammad.rasouli.7n@gmail.com>",
+    "dependencies": {
+        "ajv": "^6.12.6",
+        "camelcase-keys": "^6.2.2",
+        "mongoose-query-parser": "^1.1.9"
+    }
+}

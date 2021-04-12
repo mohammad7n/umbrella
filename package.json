@@ -1,0 +1,21 @@
+{
+  "name": "node_test_mobisoft_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private":true,
+  "scripts": {
+    "start": "set NODE_ENV=production& node ./modules/server/bin/www.js",
+    "dev": "set NODE_ENV=development& nodemon ./modules/server/bin/www.js"
+  },
+  "workspaces": [
+    "modules/*"
+  ],
+  "repository": "git@gitlab.com:mrasouli/test-node-mobisoft.git",
+  "author": "Mohammad Rasouli <mohammad.rasouli.7n@gmail.com>",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.15.0",
+    "nodemon": "^2.0.6"
+  }
+}
